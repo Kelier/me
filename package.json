@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "next lint",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
