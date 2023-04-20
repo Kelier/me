@@ -1,5 +1,8 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -7,12 +10,21 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier"
   ],
-  "plugins": ["react", "import", "jsx-a11y", "prettier"],
+  "plugins": [
+    "react",
+    "import",
+    "jsx-a11y",
+    "prettier",
+    "eslint-plugin-import",
+    "eslint-plugin-node"
+  ],
   "rules": {
-    "semi": ["error", "always"],
-    "quotes": ["error", "single"],
-    "react/prop-types": "off"
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true, "filepath": "./.prettierrc" }],
+    "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off",
+    "no-undef": "off"
   }
 }
