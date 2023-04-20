@@ -64,7 +64,7 @@ devDependencies:
     specifier: ^7.32.2
     version: registry.npmmirror.com/eslint-plugin-react@7.32.2(eslint@8.38.0)
   husky:
-    specifier: ^8.0.3
+    specifier: ^8.0.0
     version: registry.npmmirror.com/husky@8.0.3
   lint-staged:
     specifier: ^13.2.1
