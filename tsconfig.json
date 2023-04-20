@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,37 +15,27 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
   "eslintIntegration": true,
   "eslintOptions": {
-    "plugins": [
-      "react",
-      "import",
-      "jsx-a11y",
-      "prettier"
-    ]
+    "plugins": ["react", "import", "jsx-a11y", "prettier"]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "./.eslintrc.json"
+    "./.eslintrc.json",
+    "./next.config.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
