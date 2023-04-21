@@ -1,10 +1,11 @@
 import TVLoader from '@/app/models/TVLoader/main'
 
+import styles from './index.module.sass'
+
 export default function Me() {
-  console.log(3)
   return (
-    <div>
-      <h4>Hello Me 🍋</h4>
+    <div className={styles.me}>
+      <h4 className={styles.slogan}>Hello Me 🍋</h4>
       <div>
         <TVLoader />
       </div>

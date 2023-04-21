@@ -1,21 +1,32 @@
 'use client'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 import { OrbitControls, PerspectiveCamera, Shadow, useGLTF } from '@react-three/drei'
 
 import type { OrbitControlsChangeEvent } from '@react-three/drei'
 
 import ScenePot from '@/app/glTFs/gameboy.glb'
-import { Suspense } from 'react'
+import { Suspense, useRef } from 'react'
 
 import styles from './index.module.scss'
 
 const Model = () => {
   const { scene } = useGLTF(ScenePot)
+  const ref = useRef<{
+    rotation: { x: number; y: number; z: number }
+  }>()
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime()
+    if (ref.current) {
+      // clock swing animate
+      ref.current.rotation.y = (1 + Math.sin(t / 0.25)) / 10
+    }
+  })
   console.log(2, scene)
   return (
     <primitive
       object={scene}
+      ref={ref}
       dispose={null}
       rotation={[-Math.PI / 2.4, Math.PI / 36, Math.PI / 3]}
     />
