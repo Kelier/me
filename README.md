@@ -11,3 +11,4 @@ FP.1 3d gltf innerview
 2.eslint tsconfig
 3.some free model upload
 4.add leva panel => mix grid axis control>?
+5.axios grid plane wireframe

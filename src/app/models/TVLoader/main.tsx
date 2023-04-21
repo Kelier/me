@@ -6,11 +6,12 @@ import { OrbitControls, PerspectiveCamera, Shadow, useGLTF } from '@react-three/
 import type { OrbitControlsChangeEvent } from '@react-three/drei'
 
 import ScenePot from '@/app/glTFs/gameboy.glb'
-import { Suspense, useRef } from 'react'
+import { Suspense, useCallback, useRef } from 'react'
 import { A11yAnnouncer } from '@react-three/a11y'
 import { useControls } from 'leva'
 
 import styles from './index.module.scss'
+import GridAxis from '@/app/modules/GridAxis/main'
 
 const Model = () => {
   const { scene } = useGLTF(ScenePot)
@@ -40,11 +41,11 @@ const Model = () => {
   )
 }
 
-const checkThisAxis = (e: OrbitControlsChangeEvent | undefined) => {
-  console.log(e?.target)
-}
-
 const ModelLayer = () => {
+  const checkThisAxis = useCallback((e: OrbitControlsChangeEvent | undefined) => {
+    console.log(e?.target)
+  }, [])
+
   useGLTF(ScenePot)
   return (
     <Suspense fallback={null}>
@@ -52,6 +53,7 @@ const ModelLayer = () => {
         <PerspectiveCamera makeDefault position={[300, 700, 5]} resolution={1920} fov={75} />
         {/* <PerspectiveCamera makeDefault position={[640, -440, 500]} resolution={1920} fov={75} /> */}
         <ambientLight />
+        <GridAxis size={1}></GridAxis>
         <directionalLight />
         <Model />
         <OrbitControls enableZoom={false} onChange={checkThisAxis} />
