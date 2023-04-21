@@ -7,8 +7,10 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:import/typescript",
     "plugin:import/errors",
     "plugin:import/warnings",
+    "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "prettier"
@@ -19,12 +21,15 @@
     "jsx-a11y",
     "prettier",
     "eslint-plugin-import",
-    "eslint-plugin-node"
+    "eslint-plugin-node",
+    "@typescript-eslint"
   ],
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true, "filepath": "./.prettierrc" }],
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "react/no-unknown-property": ["error", { "ignore": ["object", "dispose", "rotation"] }],
+    "consistent-return": "off"
   }
 }

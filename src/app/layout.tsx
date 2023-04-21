@@ -1,4 +1,4 @@
-import './globals.scss'
+import './index.scss'
 
 export const metadata = {
   title: 'ME',

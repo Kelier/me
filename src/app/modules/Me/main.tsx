@@ -1,3 +1,13 @@
+import TVLoader from '@/app/models/TVLoader/main'
+
 export default function Me() {
-  return <div>Hello Me 🍋</div>
+  console.log(3)
+  return (
+    <div>
+      <h4>Hello Me 🍋</h4>
+      <div>
+        <TVLoader />
+      </div>
+    </div>
+  )
 }

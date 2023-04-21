@@ -16,6 +16,7 @@
     "jsx": "preserve",
     "incremental": true,
     "types": ["node"],
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
@@ -35,7 +36,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "./.eslintrc.json",
-    "./next.config.js"
+    "./next.config.js",
+    "**/*.sass"
   ],
   "exclude": ["node_modules"]
 }
