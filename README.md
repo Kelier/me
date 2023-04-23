@@ -16,3 +16,4 @@ FP.1 3d gltf innerview
 /.20230423
 1.glitch effect & noise
 TODO: nav & loading svg
+2.entry animation

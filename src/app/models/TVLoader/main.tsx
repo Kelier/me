@@ -22,10 +22,18 @@ const Model = () => {
   const { scene } = useGLTF(ScenePot)
   const ref = useRef<{
     rotation: { x: number; y: number; z: number }
+    scale: { x: number; y: number; z: number }
   }>()
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
+
     if (ref.current) {
+      if (t < 1) {
+        const scaleCurveLine = t * (1 - t + Math.pow(t, 1.2))
+        ref.current.scale.x = scaleCurveLine
+        ref.current.scale.y = scaleCurveLine
+        ref.current.scale.z = scaleCurveLine
+      }
       // clock swing animate
       ref.current.rotation.y = (1 + Math.sin(t / 0.25)) / 10
     }
@@ -48,7 +56,7 @@ const Model = () => {
 
 const ModelLayer = () => {
   const checkThisAxis = useCallback((e: OrbitControlsChangeEvent | undefined) => {
-    console.log(e?.target)
+    // console.log(e?.target)
   }, [])
 
   useGLTF(ScenePot)
@@ -66,15 +74,15 @@ const ModelLayer = () => {
         <OrbitControls enableZoom={false} onChange={checkThisAxis} />
         <Shadow color="#ca390f" colorStop={0.15} opacity={0.25} fog={false} />
         <EffectComposer>
-          <Glitch
+          {/* <Glitch
             delay={new Vector2(1.5, 1.5)} // min and max glitch delay
             duration={new Vector2(0.5, 1.0)} // min and max glitch delay
             strength={new Vector2(0.9, 0.9)} // min and max glitch delay
             mode={GlitchMode.SPORADIC} // glitch mode
             active // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)
-            ratio={0.85} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
-          />
-          {/* <Noise premultiply={false} blendFunction={BlendFunction.EXCLUSION} /> */}
+            ratio={1} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
+          /> */}
+          <Noise premultiply={false} blendFunction={BlendFunction.PIN_LIGHT} />
         </EffectComposer>
       </Canvas>
       <A11yAnnouncer />
