@@ -17,3 +17,7 @@ FP.1 3d gltf innerview
 1.glitch effect & noise
 TODO: nav & loading svg
 2.entry animation
+
+/.20230424
+1.build three module not found: stuck in 13.0.3 [this](https://github.com/pmndrs/react-postprocessing/issues/168)
+=> checkout feature/react-tsx for client

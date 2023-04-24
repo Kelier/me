@@ -3,7 +3,8 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  webpack: (config, options) => {
+
+  webpack: (config) => {
     // For glb file
     config.module.rules.push({
       test: /\.(glb)$/,
@@ -30,6 +31,8 @@ const nextConfig = {
 
     return config
   },
+  output: 'export',
+  distDir: 'dist',
 }
 
 module.exports = nextConfig
