@@ -1,0 +1,24 @@
+.navLayer
+    position: absolute
+    right: 2em
+    z-index: 2
+    .navBlock
+        font-size: 24px
+        width: 12px
+        height: 12px
+        &:nth-child(1)
+            animation: rotateSlow 4s cubic-bezier(0.73, 0.07, 0.32, 0.9) infinite
+        &:nth-child(2)
+            animation: rotateFast 3s cubic-bezier(0.73, 0.07, 0.32, 0.9) infinite
+
+@keyframes rotateSlow
+    0%
+        transform: rotateZ(0)
+    100%
+        transform: rotateZ(360deg)
+
+@keyframes rotateFast
+    0%
+        transform: rotate(360deg)
+    100%
+        transform: rotate(0)

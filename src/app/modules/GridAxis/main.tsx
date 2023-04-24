@@ -1,4 +1,5 @@
 import { Plane, Text } from '@react-three/drei'
+import { Euler, Quaternion } from 'three'
 
 const XZPlane = ({ size }: { size: number }) => (
   <Plane
@@ -36,7 +37,7 @@ const YZPlane = ({ size }: { size: number }) => (
 export default function GridAxis({ size }: { size: number }) {
   return (
     <group>
-      <Text
+      {/* <Text
         color="black"
         anchorX="center"
         anchorY="middle"
@@ -89,7 +90,7 @@ export default function GridAxis({ size }: { size: number }) {
         scale={[50, 50, 50]}
       >
         Z-
-      </Text>
+      </Text> */}
       <XZPlane size={size} />
       <XYPlane size={size} />
       <YZPlane size={size} />

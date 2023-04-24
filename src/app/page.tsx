@@ -1,5 +1,5 @@
 import Me from './modules/Me/main'
-import styles from './page.module.scss'
+import styles from './page.module.sass'
 
 import localFont from 'next/font/local'
 
@@ -26,7 +26,7 @@ const supplyFont = localFont({
 
 export default function Home() {
   return (
-    <main className={`${styles.main} ${supplyFont.className}`}>
+    <main className={`${styles.main} ${supplyFont.variable} ${majorFont.variable}`}>
       <Me></Me>
     </main>
   )
