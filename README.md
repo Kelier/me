@@ -6,6 +6,7 @@
 
 FP.1 3d gltf innerview
 
+```
 /.20230421 
 1.next.js show glb + drei show perspective camera + primitive => gltftojsx? => mesh+group
 2.eslint tsconfig
@@ -21,3 +22,5 @@ TODO: nav & loading svg
 /.20230424
 1.build three module not found: stuck in 13.0.3 [this](https://github.com/pmndrs/react-postprocessing/issues/168)
 => checkout feature/react-tsx for client
+
+```
