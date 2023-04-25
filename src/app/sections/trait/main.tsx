@@ -6,8 +6,10 @@ export default function TraitLayer() {
       <h3>◼️ /.1</h3>
       <section>
         <p>
-          您好：
-          可以叫我有时，这是我的工作昵称，来源于一个儿时印象深刻的的成语故事，这个网站汇聚了一些我的所思所想所见，我只是一个记录者，并且会一直记录到生命终止
+          Hello, you can call me "Sometimes", which is my work nickname derived from a childhood
+          story that left a deep impression on me. This website gathers some of my thoughts and
+          observations, and I am merely a recorder who will continue to document them until the end
+          of my life.
         </p>
       </section>
     </div>

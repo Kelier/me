@@ -7,7 +7,7 @@ import NavLayer from '@/app/sections/nav/main'
 export default function Me() {
   return (
     <div className={styles.me}>
-      <h2 className={styles.slogan}>Hello Me 🍋</h2>
+      <div className={styles.slogan}>Hello Me 🍋</div>
       <NavLayer />
       <TVLoader />
       <section className={styles.sections}>
