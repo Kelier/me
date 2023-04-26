@@ -27,7 +27,7 @@ const supplyFont = localFont({
 export default function Home() {
   return (
     <main className={`${styles.main} ${supplyFont.variable} ${majorFont.variable}`}>
-      {/* <Me></Me> */}
+      <Me></Me>
     </main>
   )
 }

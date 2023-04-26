@@ -31,7 +31,19 @@
     "no-undef": "off",
     "react/no-unknown-property": [
       "error",
-      { "ignore": ["object", "dispose", "rotation", "attach", "wireframe"] }
+      {
+        "ignore": [
+          "object",
+          "dispose",
+          "rotation",
+          "attach",
+          "wireframe",
+          "castShadow",
+          "receiveShadow",
+          "geometry",
+          "material"
+        ]
+      }
     ],
     "react/no-unescaped-entities": "off",
     "consistent-return": "off"

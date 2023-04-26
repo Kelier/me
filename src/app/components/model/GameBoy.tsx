@@ -1,11 +1,17 @@
+'use client'
 import { useGLTF } from '@react-three/drei'
 
-import ScenePot from '@/app/glTFs/gameboy.glb'
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import type { Group } from 'three'
 
-export default function Model() {
-  const { scene } = useGLTF(ScenePot)
+export default function Model(props: any) {
+  // not export type
+  const { scene, nodes, materials } = useGLTF('/glTFs/gameboy.glb') as unknown as {
+    scene: Group
+    nodes: any
+    materials: any
+  }
   const ref = useRef<{
     rotation: { x: number; y: number; z: number }
     scale: { x: number; y: number; z: number }
@@ -29,13 +35,26 @@ export default function Model() {
   //   showLighting: true,
   //   showStats: false,
   // })
-  console.log(2, scene)
+  console.log(2, scene, nodes, materials)
   return (
-    <primitive
-      object={scene}
+    <group
       ref={ref}
+      {...props}
       dispose={null}
       rotation={[-Math.PI / 2.4, Math.PI / 36, Math.PI / 3]}
-    />
+    >
+      <group>
+        <group>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.pCube3__0.geometry}
+            material={materials['Scene_-_Root']}
+          />
+        </group>
+      </group>
+    </group>
   )
 }
+
+useGLTF.preload('/glTFs/gameboy.glb')
