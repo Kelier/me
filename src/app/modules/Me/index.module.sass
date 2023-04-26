@@ -1,14 +1,36 @@
 .me
     width: 100vw
-    height: 100vh
+    height: inherit
     padding: 4em 0
     font-family: var(--supply-font)
     .slogan
         transform: translate3d(1em, -2.5em, 0)
         font-size: 20px
-    .sections
-        padding: 0 4em
-        margin-top: 1em
-        p
-            font-family: cursive
+    .pt1
+        position: relative
+        .sections
+            padding: 0 4em
             margin-top: 1em
+            z-index: 2
+            position: relative
+            p
+                font-family: var(--supply-font)
+                margin-top: 1em
+        .textLayer
+            width: 30vw
+            height: 10vh
+            top: 45%
+            left: 20%
+            position: relative
+        .bgPortrait
+            position: relative
+            z-index: 1
+            transform: translate(50%, 50%)
+            filter: brightness(0)
+            animation: bgPortraitFrames cubic-bezier(0.4, 0, 0.2, 1) 3.5s forwards
+
+@keyframes bgPortraitFrames
+    0%
+        filter: brightness(0)
+    100%
+        filter: brightness(2)

@@ -24,3 +24,7 @@ TODO: nav & loading svg
 => checkout feature/react-tsx for client
 2.some nav design
 ```
+
+/.20230426
+1.selfportrait
+2.file struct modify

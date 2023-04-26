@@ -13,6 +13,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
     "jsx": "preserve",
     "incremental": true,
     "types": ["node"],
@@ -37,8 +38,7 @@
     ".next/types/**/*.ts",
     "./.eslintrc.json",
     "./next.config.js",
-    "**/*.sass",
-    "dist/types/**/*.ts"
+    "**/*.sass"
   ],
   "exclude": ["node_modules"]
 }
