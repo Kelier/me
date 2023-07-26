@@ -10,7 +10,7 @@ import { useSpring, animated } from '@react-spring/three'
 export default function TextLayer() {
   const textRef = useRef(null)
 
-  const spring = useSpring({
+  const spring: any = useSpring({
     from: { scale: [0.4, 0.4, 0.4] },
     to: { scale: [1, 1, 1] },
     config: {
