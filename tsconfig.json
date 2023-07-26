@@ -17,7 +17,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "importsNotUsedAsValues": "error",
+    // "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "jsx": "preserve",
     "incremental": true,
     "types": [
