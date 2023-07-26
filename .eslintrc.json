@@ -1,8 +1,24 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig.json"]
+    "project": [
+      "./tsconfig.json"
+    ]
   },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "ignorePatterns": [
+    "src/app/tools/glitch.ts"
+  ],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -25,7 +41,14 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "prettier/prettier": ["error", {}, { "usePrettierrc": true, "filepath": "./.prettierrc" }],
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true,
+        "filepath": "./.prettierrc"
+      }
+    ],
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "off",
     "no-undef": "off",
