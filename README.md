@@ -33,4 +33,5 @@ TODO: nav & loading svg
 /.20240110
 1.nextjs version update
 2.model view effect
+3.some socail media
 ```
