@@ -76,7 +76,7 @@ export default function Model(props: any) {
     if (proxyCamera.current) {
       // set camera
       proxyCamera.current.position.x = 5 + clock.elapsedTime * 0.01
-      proxyCamera.current.position.y = 30 + clock.elapsedTime * 0.01
+      proxyCamera.current.position.y = 20 + clock.elapsedTime * 0.001
       proxyCamera.current.position.z =
         10 + clock.elapsedTime * 0.01 + Math.pow(clock.elapsedTime, 1 / 8)
       Math.pow(clock.elapsedTime, 1 / 4) + Math.pow(clock.elapsedTime, 1 / 6)
