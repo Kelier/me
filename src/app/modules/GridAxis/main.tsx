@@ -8,7 +8,7 @@ const XZPlane = ({ size }: { size: number }) => (
     position={[0, 0, 0]}
     scale={[500, 500, 500]}
   >
-    <meshStandardMaterial attach="material" color="#f9c74f" wireframe />
+    <meshStandardMaterial attach="material" color="#f9c74f" />
   </Plane>
 )
 

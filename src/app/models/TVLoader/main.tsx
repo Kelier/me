@@ -1,38 +1,54 @@
 'use client'
 import { Canvas } from '@react-three/fiber'
 
-import { OrbitControls, PerspectiveCamera, Shadow, useProgress } from '@react-three/drei'
+import { OrbitControls, Shadow, SpotLight, PerspectiveCamera } from '@react-three/drei'
 
-import type { OrbitControlsChangeEvent } from '@react-three/drei'
-
-import { Suspense, useCallback } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 
 import GridAxis from '@/app/modules/GridAxis/main'
 
 import styles from './index.module.sass'
 
 import Model from '@/app/components/model/GameBoy'
+import { BlendFunction } from 'postprocessing'
+import { EffectComposer, Noise } from '@react-three/postprocessing'
 
 const ModelLayer = () => {
-  const checkThisAxis = useCallback((e: OrbitControlsChangeEvent | undefined) => {
-    // console.log(e?.target)
+  const [randomColor, setRandomColor] = useState('transparent')
+
+  useEffect(() => {
+    setRandomColor('#ff7b00')
   }, [])
 
-  const { progress } = useProgress()
+  const cameraRef = useRef()
 
   return (
     <Suspense fallback={<span>🔦</span>}>
       <Canvas dpr={2} shadows>
-        <PerspectiveCamera makeDefault position={[300, 700, 5]} resolution={1920} fov={75} />
+        <PerspectiveCamera
+          makeDefault
+          fov={20}
+          near={0.15}
+          far={200}
+          position={[0, 80, 3]}
+          ref={cameraRef}
+        />
         <ambientLight />
         <GridAxis size={1}></GridAxis>
         <directionalLight />
-        <Model />
-        <OrbitControls enableZoom={false} onChange={checkThisAxis} />
+        <SpotLight
+          distance={1}
+          angle={0.85}
+          attenuation={5}
+          anglePower={5}
+          color={randomColor}
+        ></SpotLight>
+        <Model proxyCamera={cameraRef} />
+        <OrbitControls enableZoom={false} autoRotate />
         <Shadow color="#ca390f" colorStop={0.15} opacity={0.25} fog={false} />
-        {/* <EffectComposer> */}
-        {/* <Noise premultiply={false} blendFunction={BlendFunction.PIN_LIGHT} /> */}
-        {/* </EffectComposer> */}
+        <EffectComposer>
+          <Noise premultiply={true} blendFunction={BlendFunction.PIN_LIGHT} />
+        </EffectComposer>
       </Canvas>
     </Suspense>
   )

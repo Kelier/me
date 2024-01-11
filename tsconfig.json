@@ -22,7 +22,7 @@
     "jsx": "preserve",
     "incremental": true,
     "types": [
-      "node",
+      "node"
     ],
     "baseUrl": ".",
     "plugins": [
@@ -53,7 +53,8 @@
     "./.eslintrc.json",
     "./next.config.js",
     "**/*.sass",
-    "src/app/tools/glitch.js"
+    "src/app/tools/glitch.js",
+    "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

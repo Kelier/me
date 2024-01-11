@@ -23,8 +23,14 @@ TODO: nav & loading svg
 1.build three module not found: stuck in 13.0.3 [this](https://github.com/pmndrs/react-postprocessing/issues/168)
 => checkout feature/react-tsx for client
 2.some nav design
-```
+
 
 /.20230426
 1.selfportrait
 2.file struct modify
+
+
+/.20240110
+1.nextjs version update
+2.model view effect
+```
