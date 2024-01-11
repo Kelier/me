@@ -1,24 +1,17 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ]
+    "project": ["./tsconfig.json"]
   },
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".tsx"
-      ]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
       "typescript": {}
     }
   },
-  "ignorePatterns": [
-    "src/app/tools/glitch.ts"
-  ],
+  "ignorePatterns": ["src/app/tools/glitch.ts"],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -69,6 +62,8 @@
       }
     ],
     "react/no-unescaped-entities": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off"
   }
 }

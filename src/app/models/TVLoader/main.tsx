@@ -27,7 +27,7 @@ const ModelLayer = () => {
       <Canvas dpr={2} shadows>
         <PerspectiveCamera
           makeDefault
-          fov={20}
+          fov={10}
           near={0.15}
           far={200}
           position={[0, 80, 3]}

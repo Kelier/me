@@ -1,0 +1,41 @@
+.socialLayer
+    display: flex
+    position: absolute
+    z-index: 101
+    gap: 10px
+    right: 0
+    left: 75%
+    transform: translate3d(0%, -86px, 0)
+    background: #fff
+    border-radius: 20px
+    padding: 0 20px
+
+    .icon
+        position: relative
+        cursor: pointer
+        opacity: .9
+        width: 24px
+        height: 24px
+        display: block
+        text-align: center
+        &:hover
+            opacity: 1
+            filter: brightness(1.2)
+            animation: skew .1s cubic-bezier(0.61, 0.39, 0.58, 1)
+
+
+@media (max-width: 640px) 
+    .socialLayer
+        transform: translate3d(0, -66px, 0)
+        right: 24px
+        left: auto
+
+@keyframes skew
+    0%
+        transform: skew(10deg)
+    50%
+        transform: skew(0deg)
+    100%
+        transform: skew(-10deg)
+
+

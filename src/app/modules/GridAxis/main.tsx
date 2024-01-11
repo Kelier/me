@@ -19,7 +19,7 @@ const XYPlane = ({ size }: { size: number }) => (
     position={[0, 0, 0]}
     scale={[500, 500, 500]}
   >
-    <meshStandardMaterial attach="material" color="pink" wireframe />
+    <meshStandardMaterial attach="material" color="#d33939" wireframe />
   </Plane>
 )
 
@@ -30,7 +30,7 @@ const YZPlane = ({ size }: { size: number }) => (
     position={[0, 0, 0]}
     scale={[500, 500, 500]}
   >
-    <meshStandardMaterial attach="material" color="#80ffdb" wireframe />
+    <meshStandardMaterial attach="material" color="#d33939" wireframe />
   </Plane>
 )
 
