@@ -75,10 +75,11 @@ export default function Model(props: any) {
   useFrame(({ clock }) => {
     if (proxyCamera.current) {
       // set camera
-      proxyCamera.current.position.x = 5 + clock.elapsedTime * 0.2
-      proxyCamera.current.position.y = 30
-      proxyCamera.current.position.z = 10 + Math.pow(clock.elapsedTime * 10, 1 / 4)
-      Math.pow(clock.elapsedTime, 2) - Math.pow(clock.elapsedTime, 1 / 2)
+      proxyCamera.current.position.x = 5 + clock.elapsedTime * 0.01
+      proxyCamera.current.position.y = 30 + clock.elapsedTime * 0.01
+      proxyCamera.current.position.z =
+        10 + clock.elapsedTime * 0.01 + Math.pow(clock.elapsedTime, 1 / 8)
+      Math.pow(clock.elapsedTime, 1 / 4) + Math.pow(clock.elapsedTime, 1 / 6)
     }
   })
 
