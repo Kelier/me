@@ -9,14 +9,14 @@ export default function Me() {
   return (
     <div className={styles.me}>
       <div className={styles.slogan}>Hello Me</div>
-      <SocialMedia />
       <div className={styles.pt1}>
         <section className={styles.sections}>
           <TraitLayer />
+          <NavLayer />
+          <SocialMedia />
+          <TVLoader />
         </section>
       </div>
-      <NavLayer />
-      <TVLoader />
     </div>
   )
 }

@@ -78,7 +78,7 @@ export default function Model(props: any) {
       proxyCamera.current.position.x = 5 + clock.elapsedTime * 0.2
       proxyCamera.current.position.y = 30
       proxyCamera.current.position.z = 10 + Math.pow(clock.elapsedTime * 10, 1 / 4)
-      Math.pow(clock.elapsedTime, 2) + Math.pow(clock.elapsedTime, 1 / 2)
+      Math.pow(clock.elapsedTime, 2) - Math.pow(clock.elapsedTime, 1 / 2)
     }
   })
 
