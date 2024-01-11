@@ -3,6 +3,9 @@ import styles from './page.module.sass'
 
 import localFont from 'next/font/local'
 
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
+
 const majorFont = localFont({
   src: [
     {
@@ -27,7 +30,9 @@ const supplyFont = localFont({
 export default function Home() {
   return (
     <main className={`${styles.main} ${supplyFont.variable} ${majorFont.variable}`}>
-      <Me></Me>
+      <SpeedInsights />
+      <Analytics />
+      <Me />
     </main>
   )
 }
