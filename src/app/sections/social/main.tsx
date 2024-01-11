@@ -1,7 +1,7 @@
 'use client'
 import styles from './index.module.sass'
 
-const socialLinks = {
+const socialLinks: Record<string, string> = {
   github: 'https://github.com/Kelier',
   twitter: 'https://twitter.com/sleepbug_yes',
   discord: 'https://discordapp.com/users/detailsnumber',
@@ -33,7 +33,7 @@ export default function SocialMedia() {
       // 模拟点击 <a> 元素
       mailtoAnchor.click()
     } else {
-      window.open(socialLinks[key])
+      key && window.open(socialLinks[key])
     }
   }
 
