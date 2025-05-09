@@ -1,7 +1,7 @@
 import './index.sass'
 
 export const metadata = {
-  title: 'ME',
+  title: `CDown's Space`,
   description: '2020-2032 T.D.LemonTree　なにそれ？',
 }
 

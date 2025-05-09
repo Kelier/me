@@ -2,13 +2,7 @@
     display: inline-flex
     position: relative
     justify-content: center
-    z-index: 99
     gap: 10px
-    right: 0
-    left: 75%
-    transform: translate3d(0%, -106px, 0)
-    background: #fff
-    border-radius: 30px
     padding: 10px 20px
 
     .icon
@@ -19,23 +13,8 @@
         height: 24px
         display: block
         text-align: center
-        &:hover
-            opacity: 1
-            filter: brightness(1.2)
-            animation: skew .5s cubic-bezier(0.61, 0.39, 0.58, 1) infinite
-
 
 @media (max-width: 640px) 
     .socialLayer
         position: relative
-        transform: translate3d(-140px, 66px, 10px) scale(.8)
-
-@keyframes skew
-    0%
-        transform:  rotate(10deg) scale(1)
-    50%
-        transform:  rotate(0deg) scale(1.2)
-    100%
-        transform:  rotate(-10deg) scale(1)
-
 
