@@ -5,6 +5,7 @@ import ShapeBlur from '@/app/components/blurIcon'
 import { useRouter } from 'next/navigation'
 import FadeContent from '@/app/components/fadeContent'
 import { useEffect, useState } from 'react'
+import Noise from '@/app/components/noise'
 
 export default function Me() {
   const router = useRouter()
@@ -62,6 +63,15 @@ export default function Me() {
         >
           <span>窄门</span>
         </FadeContent>
+        <div className={styles.noiseHidden}>
+          <Noise
+            patternSize={100}
+            patternScaleX={20}
+            patternScaleY={20}
+            patternRefreshInterval={2}
+            patternAlpha={70}
+          />
+        </div>
       </div>
     </div>
   )

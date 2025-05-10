@@ -92,7 +92,7 @@ float strokeAA(float x, float size, float w, float edge) {
 
 void main() {
     vec2 st = st0 + 0.5;
-    vec2 posMouse = mx * vec2(1., -1.) + 0.5;
+    vec2 posMouse = mx * vec2(1., -1.) + 0.15;
     
     float size = u_shapeSize;
     float roundness = u_roundness;
@@ -118,11 +118,11 @@ void main() {
         sdf = strokeAA(sdf, 0.58, 0.02, sdfCircle) * 4.0;
     } else if (VAR == 3) {
         sdf = sdPoly(st - vec2(0.5, 0.45), 0.3, 3);
-        sdf = fill(sdf, 0.05, sdfCircle) * 1.4;
+        sdf = fill(sdf, 0.15, sdfCircle) * 1.4;
     }
     
     vec3 color = vec3(sdf);
-    float alpha = step(0.01, sdf);
+    float alpha = step(0.001, sdf);
     gl_FragColor = vec4(color.rgb, alpha);
 }
 `
