@@ -9,6 +9,7 @@ const socialLinks: Record<string, string> = {
   douyin: 'https://www.douyin.com/user/MS4wLjABAAAAfIV5F2XqYDIUuiyUo88lK3Zk5sJCLv-Yf9WOQyXbgAg',
   red: 'https://www.xiaohongshu.com/user/profile/5bf78953e168b300017db5b4',
   gmail: 'https://twitter.com/sleepbug_yes',
+  profile: '#profile',
 }
 
 export default function SocialMedia() {
@@ -33,32 +34,39 @@ export default function SocialMedia() {
       // 模拟点击 <a> 元素
       mailtoAnchor.click()
     } else {
-      key && window.open(socialLinks[key])
+      if (key === 'profile') {
+        // 站内 TODO: resume
+      } else {
+        key && window.open(socialLinks[key])
+      }
     }
   }
 
   return (
     <div className={styles.socialLayer} onClick={(e) => openMedia(e)}>
       <div className={styles.icon} title="github">
-        🐱
+        乾
       </div>
       <div className={styles.icon} title="twitter">
-        🐦‍⬛
+        兌
       </div>
       <div className={styles.icon} title="discord">
-        🎮
+        離
       </div>
       <div className={styles.icon} title="article">
-        📚
+        震
       </div>
       <div className={styles.icon} title="douyin">
-        📷
+        巽
       </div>
       <div className={styles.icon} title="red">
-        🍠
+        坎
       </div>
       <div className={styles.icon} title="gmail">
-        📮
+        艮
+      </div>
+      <div className={styles.icon} title="profile">
+        坤
       </div>
     </div>
   )
