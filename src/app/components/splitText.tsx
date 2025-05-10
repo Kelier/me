@@ -1,5 +1,5 @@
 'use client'
-import { useSprings, animated, SpringValue, easings } from '@react-spring/web'
+import { useSprings, animated, SpringValue } from '@react-spring/web'
 import { useEffect, useRef, useState } from 'react'
 
 interface SplitTextProps {

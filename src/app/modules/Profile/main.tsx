@@ -6,7 +6,7 @@ import styles from './index.module.sass'
 import TiltedCard from '@/app/components/titleCard'
 import Dock from '@/app/components/dock'
 import { useDeviceDetect } from '@/app/hooks/useDeviceDetect'
-import ShapeBlur from '@/app/components/blurIcon'
+import { ShapeBlur } from '@/app/components/blurIcon'
 
 export default function ProfileContent() {
   const socialLinks: Record<string, string> = {
@@ -20,9 +20,7 @@ export default function ProfileContent() {
     profile: '#profile',
   }
 
-  const openMedia = (e: React.MouseEvent<HTMLElement>) => {
-    const targetDom = e.target as HTMLElement
-    const key = targetDom.getAttribute('title')
+  const openMedia = (key: string) => {
     if (key === 'gmail') {
       // 替换为实际的收件人、主题和正文
       const to = 'jorkingwire@gmail.com'
@@ -53,37 +51,37 @@ export default function ProfileContent() {
     {
       icon: <div className={styles.keyItem}>G</div>,
       label: 'Github',
-      onClick: () => alert('Home!'),
+      onClick: () => openMedia('github'),
     },
     {
       icon: <div className={styles.keyItem}>T</div>,
       label: 'Twitter',
-      onClick: () => alert('Archive!'),
+      onClick: () => openMedia('twitter'),
     },
     {
       icon: <div className={styles.keyItem}>D</div>,
       label: 'Discord',
-      onClick: () => alert('Profile!'),
+      onClick: () => openMedia('discord'),
     },
     {
       icon: <div className={styles.keyItem}>W</div>,
       label: '公众号',
-      onClick: () => alert('Settings!'),
+      onClick: () => openMedia('article'),
     },
     {
       icon: <div className={styles.keyItem}>T</div>,
       label: '抖音',
-      onClick: () => alert('Settings!'),
+      onClick: () => openMedia('douyin'),
     },
     {
       icon: <div className={styles.keyItem}>R</div>,
       label: '小红书',
-      onClick: () => alert('Settings!'),
+      onClick: () => openMedia('red'),
     },
     {
       icon: <div className={styles.keyItem}>M</div>,
       label: 'GMail',
-      onClick: () => alert('Settings!'),
+      onClick: () => openMedia('gmail'),
     },
     {
       icon: <div className={styles.keyItem}>B</div>,

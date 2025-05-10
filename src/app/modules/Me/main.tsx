@@ -1,10 +1,9 @@
 'use client'
 import SplitText from '@/app/components/splitText'
 import styles from './index.module.sass'
-import ShapeBlur from '@/app/components/blurIcon'
+import { ShapeBlur } from '@/app/components/blurIcon'
 import { useRouter } from 'next/navigation'
 import FadeContent from '@/app/components/fadeContent'
-import { useEffect, useState } from 'react'
 import Noise from '@/app/components/noise'
 
 export default function Me() {
