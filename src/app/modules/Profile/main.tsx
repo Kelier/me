@@ -290,6 +290,17 @@ export default function ProfileContent() {
         >
           {`/. 向往：自由职业、数字游民、远程办公、独立开发者、和真诚且聪明的人合作学习、不说废话、反官僚、WLB&965 拥护者`}
         </FadeContent>
+
+        <FadeContent
+          className={styles.infoDock}
+          blur={false}
+          delay={100}
+          duration={500}
+          easing="ease-out"
+          initialOpacity={0}
+        >
+          {`◽️. 番外：如果你是文学、电影、音乐、游戏、话剧、摄影、旅行、运动( but 不包括🏀 )、归纳、冥想、心理、玄学、时尚以及宇宙探索等主题感兴趣，或许我们可以成为莫逆之交`}
+        </FadeContent>
       </div>
 
       <div className={styles.nav}>
