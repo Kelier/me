@@ -157,7 +157,7 @@ export default function Dock({
   const height = useSpring(heightRow, spring)
 
   return (
-    <motion.div style={{ height, scrollbarWidth: 'none' }} className={styles.dockOuter}>
+    <motion.div style={{ scrollbarWidth: 'none', height: '128px' }} className={styles.dockOuter}>
       <motion.div
         onMouseMove={({ pageX }) => {
           isHovered.set(1)
