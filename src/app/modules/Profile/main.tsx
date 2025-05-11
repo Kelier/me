@@ -176,7 +176,7 @@ export default function ProfileContent() {
         imageHeight="180px"
         imageWidth="180px"
         rotateAmplitude={16}
-        scaleOnHover={1.2}
+        scaleOnHover={1.1}
         showMobileWarning={false}
         showTooltip={true}
         displayOverlayContent={true}
