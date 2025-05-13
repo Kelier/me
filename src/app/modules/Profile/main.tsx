@@ -17,7 +17,7 @@ export default function ProfileContent() {
     douyin: 'https://www.douyin.com/user/MS4wLjABAAAAfIV5F2XqYDIUuiyUo88lK3Zk5sJCLv-Yf9WOQyXbgAg',
     red: 'https://www.xiaohongshu.com/user/profile/5bf78953e168b300017db5b4',
     gmail: 'https://twitter.com/sleepbug_yes',
-    profile: '#profile',
+    blog: 'https://cd-logs.netlify.app/',
   }
 
   const openMedia = (key: string) => {
@@ -39,11 +39,7 @@ export default function ProfileContent() {
       // 模拟点击 <a> 元素
       mailtoAnchor.click()
     } else {
-      if (key === 'profile') {
-        // 站内 TODO: resume
-      } else {
-        key && window.open(socialLinks[key])
-      }
+      key && window.open(socialLinks[key])
     }
   }
 
@@ -86,7 +82,7 @@ export default function ProfileContent() {
     {
       icon: <div className={styles.keyItem}>B</div>,
       label: 'Blog',
-      onClick: () => alert('此人太懒，博客还未迁移!'),
+      onClick: () => openMedia('blog'),
     },
   ]
 
